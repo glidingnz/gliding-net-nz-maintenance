@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Down for maintenance — Gliding New Zealand</title>
+<style>
+  :root { --bg: #f4f7fb; --card: #fff; --text: #1d2733; --muted: #5a6878; --accent: #1f6fb2; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #0f1620; --card: #182230; --text: #e6edf5; --muted: #9fb0c3; --accent: #6db3f2; }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; min-height: 100vh; display: grid; place-items: center; padding: 16px;
+    background: var(--bg); color: var(--text);
+    font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  main {
+    max-width: 560px; width: 100%; background: var(--card); border-radius: 12px;
+    padding: 40px 32px; box-shadow: 0 4px 24px rgba(0,0,0,.08); text-align: center;
+  }
+  .icon { font-size: 48px; line-height: 1; }
+  h1 { font-size: 1.5rem; margin: 16px 0 12px; }
+  p { margin: 0 0 14px; color: var(--muted); }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<main>
+  <div class="icon" aria-hidden="true">🛠️</div>
+  <h1><span id="domain">gliding.net.nz</span> is down for maintenance</h1>
+  <p>The site is offline for unscheduled maintenance while we apply
+    <a href="https://www.huntress.com/blog/php2shell-leaked-critical-php-vulnerabilities">urgent security fixes</a>.</p>
+  <p>Please check back later. We apologise for the inconvenience.</p>
+  <p>Questions? Contact <a href="mailto:webmaster@gliding.co.nz">webmaster@gliding.co.nz</a>.</p>
+</main>
+<script>
+  if (/gliding\.(net|co)\.nz$/.test(location.hostname))
+    document.getElementById('domain').textContent = location.hostname.replace(/^www\./, '');
+</script>
+</body>
+</html>
